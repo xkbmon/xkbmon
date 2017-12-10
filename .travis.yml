@@ -1,0 +1,13 @@
+language: c
+sudo: required
+dist: trusty
+
+compiler:
+  - clang
+  - gcc
+
+install:
+  - sudo apt install libx11-dev
+
+script:
+  - make

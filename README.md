@@ -1,5 +1,7 @@
 # xkbmon - command-line keyboard layout monitor for X11
 
+[![Build Status](https://travis-ci.org/xkbmon/xkbmon.svg)](https://travis-ci.org/xkbmon/xkbmon)
+
 ## Features
 
 * real-time monitoring with zero CPU usage
