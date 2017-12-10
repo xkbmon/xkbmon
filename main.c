@@ -111,6 +111,7 @@ void print_layout()
     if (name) {
         XFree(name);
     }
+    XkbFreeKeyboard(desc, 0, 1);
 }
 
 int main(int argc, char **argv)
