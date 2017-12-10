@@ -20,6 +20,8 @@
 
 int main(int argc, char **argv)
 {
+    setbuf(stdout, NULL);
+
     int xkb_event_t, error, major = XkbMajorVersion, minor = XkbMinorVersion, reason;
     Display *dpy = XkbOpenDisplay(NULL, &xkb_event_t, &error, &major, &minor, &reason);
     if (!dpy) {
