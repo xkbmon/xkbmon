@@ -19,6 +19,7 @@
 #include <ctype.h>
 #include <X11/XKBlib.h>
 
+#define VERSION "0.1"
 typedef enum {NORMAL, UPPER, CAMEL} case_mode_t;
 typedef enum {ONCE, LOOP} run_mode_t;
 
@@ -36,6 +37,7 @@ void parse_args(int argc, char **argv)
                 "  -o    print layout once and exit\n"
                 "  -u    output layout in upper case\n"
                 "  -c    output layout in camel case\n"
+                "  -v    version number\n"
                 "  -h    print this message\n"
                 "\n",
                 argv[0]);
@@ -52,6 +54,10 @@ void parse_args(int argc, char **argv)
         if (!strcmp(argv[i], "-c")) {
             case_mode = CAMEL;
             continue;
+        }
+        if (!strcmp(argv[i], "-v")) {
+            printf("%s\n", VERSION);
+            exit(0);
         }
         fprintf(stderr, "bad argument '%s', try '-h'\n", argv[i]);
         exit(1);
