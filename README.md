@@ -42,6 +42,16 @@ execp_background_id = 0
 execp_centered = 0
 ```
 
+### dwm
+
+![dwm status](/screenshots/dwm.png?raw=true)
+
+Add to `.xsession`
+
+```
+xkbmon -u | while read -r line; do xsetroot -name $line; done &
+```
+
 ## Build Instructions
 
 ### DEB-based distro
