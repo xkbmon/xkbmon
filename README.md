@@ -2,6 +2,22 @@
 
 [![Build Status](https://travis-ci.org/xkbmon/xkbmon.svg)](https://travis-ci.org/xkbmon/xkbmon)
 
+<!-- vim-markdown-toc GFM -->
+
+* [Features](#features)
+* [Examples](#examples)
+  - [tmux](#tmux)
+  - [Tint2](#tint2)
+  - [dwm](#dwm)
+  - [i3 with i3blocks](#i3-with-i3blocks)
+* [Build Instructions](#build-instructions)
+  - [DEB-based distro](#deb-based-distro)
+  - [RPM-based distro](#rpm-based-distro)
+  - [Build & Run](#build--run)
+* [License](#license)
+
+<!-- vim-markdown-toc -->
+
 ## Features
 
 * real-time monitoring with zero CPU usage
