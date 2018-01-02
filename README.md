@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/xkbmon/xkbmon.svg)](https://travis-ci.org/xkbmon/xkbmon)
 
+## Table of Contents
+
 <!-- vim-markdown-toc GFM -->
 
 * [Features](#features)
