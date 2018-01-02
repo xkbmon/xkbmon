@@ -52,6 +52,19 @@ Add to `.xsession`
 xkbmon -u | while read -r line; do xsetroot -name $line; done &
 ```
 
+### i3 with i3blocks
+
+![i3 i3blocks](/screenshots/i3.png?raw=true)
+
+Add to `i3blocks.conf`:
+
+```
+[xkbmon]
+command=xkbmon -u
+interval=persist
+color=#2E9EF4
+```
+
 ## Build Instructions
 
 ### DEB-based distro
