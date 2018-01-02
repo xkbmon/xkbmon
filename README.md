@@ -1,4 +1,6 @@
-# xkbmon - versatile keyboard layout monitor for X11
+# xkbmon
+
+A versatile keyboard layout monitor for X11.
 
 [![Build Status](https://travis-ci.org/xkbmon/xkbmon.svg)](https://travis-ci.org/xkbmon/xkbmon)
 
