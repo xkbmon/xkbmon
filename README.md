@@ -107,4 +107,4 @@ make
 ```
 
 ## License
-[GPL3](/LICENSE.GPL3)
+[MIT](/LICENSE.MIT)
