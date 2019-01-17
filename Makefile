@@ -1,2 +1,5 @@
+CC ?= gcc
+CFLAGS += -Wall -O2 -std=c99
+
 xkbmon: main.c
-	gcc -Wall -O2 -std=c99 $< -o $@ -lX11
+	$(CC) $(CFLAGS) $< -o $@ -lX11
