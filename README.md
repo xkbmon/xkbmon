@@ -26,6 +26,8 @@ A versatile keyboard layout monitor for X11.
 
 * real-time monitoring with zero CPU usage
 * output layout in lower, upper or camel case
+* extra low memory footprint
+* zero dependency (only Xlib)
 
 ## Examples
 
