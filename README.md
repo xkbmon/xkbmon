@@ -27,7 +27,7 @@ A versatile keyboard layout monitor for X11.
 * real-time monitoring with zero CPU usage
 * output layout in lower, upper or camel case
 * extra low memory footprint
-* zero dependency (only Xlib)
+* zero dependency (only XCB)
 
 ## Examples
 
@@ -92,13 +92,13 @@ color=#2E9EF4
 ### DEB-based distro
 
 ```sh
-apt install libx11-dev
+apt install libxcb-xkb-dev
 ```
 
 ### RPM-based distro
 
 ```sh
-yum install libX11-devel
+yum install libxcb-devel
 ```
 
 ### Build & Run

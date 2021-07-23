@@ -7,7 +7,7 @@ compiler:
   - gcc
 
 install:
-  - sudo apt install libx11-dev
+  - sudo apt install libxcb-xkb-dev
 
 script:
   - make

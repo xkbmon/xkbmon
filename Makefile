@@ -1,5 +1,5 @@
 CC ?= gcc
-CFLAGS += -Wall -O2 -std=c99
+CFLAGS += -Wall -Wextra -Werror -Wconversion -pedantic -std=c99 -O2
 
 xkbmon: main.c
-	$(CC) $(CFLAGS) $< -o $@ -lX11
+	$(CC) $(CFLAGS) $^ -o $@ -lxcb -lxcb-xkb
