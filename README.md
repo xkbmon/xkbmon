@@ -2,7 +2,7 @@
 
 A versatile keyboard layout monitor for X11.
 
-[![Build Status](https://travis-ci.org/xkbmon/xkbmon.svg)](https://travis-ci.org/xkbmon/xkbmon)
+[![Build Status](https://travis-ci.com/xkbmon/xkbmon.svg)](https://travis-ci.com/xkbmon/xkbmon)
 
 ## Table of Contents
 
