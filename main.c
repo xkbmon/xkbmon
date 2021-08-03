@@ -111,8 +111,10 @@ void print_layout(xcb_connection_t *connection)
 {
     int group = 0;
     {
-        xcb_xkb_get_state_cookie_t cookie = xcb_xkb_get_state_unchecked(connection, XCB_XKB_ID_USE_CORE_KBD);
-        xcb_xkb_get_state_reply_t *reply = xcb_xkb_get_state_reply(connection, cookie, NULL);
+        xcb_xkb_get_state_cookie_t cookie =
+            xcb_xkb_get_state_unchecked(connection, XCB_XKB_ID_USE_CORE_KBD);
+        xcb_xkb_get_state_reply_t *reply =
+            xcb_xkb_get_state_reply(connection, cookie, NULL);
         if (!reply) {
             printf("error\n");
         }
@@ -124,23 +126,28 @@ void print_layout(xcb_connection_t *connection)
     xcb_xkb_get_names_value_list_t list;
     {
         xcb_xkb_get_names_cookie_t cookie = xcb_xkb_get_names(
-            connection, XCB_XKB_ID_USE_CORE_KBD, XCB_XKB_NAME_DETAIL_GROUP_NAMES | XCB_XKB_NAME_DETAIL_SYMBOLS);
-        xcb_xkb_get_names_reply_t *reply = xcb_xkb_get_names_reply(connection, cookie, NULL);
+            connection, XCB_XKB_ID_USE_CORE_KBD,
+            XCB_XKB_NAME_DETAIL_GROUP_NAMES | XCB_XKB_NAME_DETAIL_SYMBOLS);
+        xcb_xkb_get_names_reply_t *reply =
+            xcb_xkb_get_names_reply(connection, cookie, NULL);
         if (!reply) {
             print_error("xcb_xkb_get_names failed\n");
         }
 
         const void *buffer = xcb_xkb_get_names_value_list(reply);
-        xcb_xkb_get_names_value_list_unpack(buffer, reply->nTypes, reply->indicators, reply->virtualMods,
-                                            reply->groupNames, reply->nKeys, reply->nKeyAliases, reply->nRadioGroups,
-                                            reply->which, &list);
+        xcb_xkb_get_names_value_list_unpack(
+            buffer, reply->nTypes, reply->indicators, reply->virtualMods,
+            reply->groupNames, reply->nKeys, reply->nKeyAliases,
+            reply->nRadioGroups, reply->which, &list);
         free(reply);
     }
 
     char *name;
     {
-        xcb_get_atom_name_cookie_t cookie = xcb_get_atom_name(connection, list.symbolsName);
-        xcb_get_atom_name_reply_t *reply = xcb_get_atom_name_reply(connection, cookie, NULL);
+        xcb_get_atom_name_cookie_t cookie =
+            xcb_get_atom_name(connection, list.symbolsName);
+        xcb_get_atom_name_reply_t *reply =
+            xcb_get_atom_name_reply(connection, cookie, NULL);
         if (!reply) {
             print_error("xcb_get_atom_name failed\n");
         }
@@ -190,15 +197,17 @@ int main(int argc, char *argv[])
     xcb_connection_t *connection = xcb_connect(NULL, NULL);
 
     {
-        xcb_xkb_use_extension_cookie_t cookie =
-            xcb_xkb_use_extension_unchecked(connection, XCB_XKB_MAJOR_VERSION, XCB_XKB_MINOR_VERSION);
+        xcb_xkb_use_extension_cookie_t cookie = xcb_xkb_use_extension_unchecked(
+            connection, XCB_XKB_MAJOR_VERSION, XCB_XKB_MINOR_VERSION);
 
-        xcb_xkb_use_extension_reply_t *reply = xcb_xkb_use_extension_reply(connection, cookie, NULL);
+        xcb_xkb_use_extension_reply_t *reply =
+            xcb_xkb_use_extension_reply(connection, cookie, NULL);
         if (!reply || !reply->supported) {
             print_error("xcb_xkb_use_extension_unchecked failed\n");
         }
 
-        xcb_xkb_select_events(connection, XCB_XKB_ID_USE_CORE_KBD, XCB_XKB_EVENT_TYPE_STATE_NOTIFY, 0,
+        xcb_xkb_select_events(connection, XCB_XKB_ID_USE_CORE_KBD,
+                              XCB_XKB_EVENT_TYPE_STATE_NOTIFY, 0,
                               XCB_XKB_EVENT_TYPE_STATE_NOTIFY, 0, 0, NULL);
     }
 
