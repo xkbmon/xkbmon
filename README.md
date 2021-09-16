@@ -2,8 +2,6 @@
 
 A versatile keyboard layout monitor for X11.
 
-[![Build Status](https://travis-ci.com/xkbmon/xkbmon.svg)](https://travis-ci.com/xkbmon/xkbmon)
-
 ## Table of Contents
 
 <!-- vim-markdown-toc GFM -->
